@@ -70,6 +70,7 @@ Known bugs / limitations:
 * Progress charts and trees are only shown for the language the person is currently learning.
 * Trees don't show divisions between sections or bonus skills.
 * The text for showing/hiding the tree is still only in English.
+* The progress chart on your home page won't update after using immersion until you refresh the page or do a lesson/practice.
 * Still being tested.
 
 [Install Duolingo Stats](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-stats.user.js) (instructions above)
