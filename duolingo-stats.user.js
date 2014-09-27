@@ -118,7 +118,6 @@ function f($) {
         'body.dstree section.main-left > * { display:none; }'+
         'body.dstree section.main-left > #dstree { display:block; }'+
         '.ds-link { color:#1caff6; cursor:pointer; }'+
-        '#dstree-link { margin-top:30px; }'+
         '#dstree { position:relative; }'+
         '#dstree-close { position:absolute; top:0; right:0; color:#dd381d; cursor:pointer; font-size:140%; font-weight:bold; }'+
         '#dstree .flag { position:relative; z-index:1; margin-right:-5px; }'+
@@ -151,7 +150,7 @@ function f($) {
             console.log('lookupname = ' + lookupname);
             
             // Add progress element to page.
-            createDWP('#app .sidebar-progress');
+            createDWP('#app #weekly-progress');
             
             // Show the chart.
            	showProgress(duo.user.get('language_data'), duo.user.get('learning_language'));
@@ -165,8 +164,7 @@ function f($) {
             console.log('lookupname = ' + lookupname);
             
             // Add progress element to page.
-            // Use the tier (translation) and level "badge grids" since not every profile has the tier grid.
-            createDWP('#app .tier-badge-grid, #app .level-badge-grid', true);
+            createDWP('#app .page-sidebar .inner .box-colored', true);
             
             // Show the chart. Use the duo.user object if we're looking at our own profile, AJAX otherwise.
             if (username==lookupname) {
@@ -191,11 +189,12 @@ function f($) {
     
     // Selector matches the element to insert the graph after.
     function createDWP(selector, extraLinks) {
-        $(selector).last().after(dwp = $('<div class="dwp-progress">' + _('loading') + '</div>'));
+        $(selector).last().before(dwp = $('<div class="dwp-progress box-colored light-gray">' + _('loading') + '</div>'));
         
         // Add button for showing tree.
         if (extraLinks) {
-        	dwp.parent().append($('<h3 id="dstree-link" class="ds-link">' + _('show_tree') + '</h3>').click(showTree));
+            $(selector).first().before($('<div class="ds-link box-colored light-gray"><div id="dstree-link">' +
+                                         _('show_tree') + '</div></div>').click(showTree));
         }
     }
     
