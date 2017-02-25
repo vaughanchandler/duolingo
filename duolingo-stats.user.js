@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Duolingo Stats
 // @namespace    http://code-poet.net
-// @version      0.01
+// @version      1.0.0
 // @description  Shows stats on Duolingo
 // @match        http://www.duolingo.com/*
 // @match        https://www.duolingo.com/*
-// @copyright    2014, Vaughan Chandler, MIT License
+// @copyright    2017, Vaughan Chandler, MIT License
 // ==/UserScript==
 
 
