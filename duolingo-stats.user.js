@@ -165,8 +165,8 @@ function f($) {
             console.log('lookupname = ' + lookupname);
             
             // Add progress element to page.
-            // Use the tier (translation) and level "badge grids" since not every profile has the tier grid.
-            createDWP('#app .tier-badge-grid, #app .level-badge-grid', true);
+            // Use the tier (translation), level "badge grids" and language list grids since not every profile has the tier or level grids.
+            createDWP('#app .tier-badge-grid, #app .level-badge-grid, #app .profile-language-list', true);
             
             // Show the chart. Use the duo.user object if we're looking at our own profile, AJAX otherwise.
             if (username==lookupname) {
