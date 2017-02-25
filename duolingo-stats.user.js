@@ -125,9 +125,12 @@ function f($) {
     '</style>').get(0));
     
     // Analyze the page and initialize the AJAX request if it makes sense.
-    function process() {
+    function process(e, xhr, options) {
         
         console.log('process()');
+
+        // Ignore AJAX requests initiated by this method to prevent infinite loops.
+        if (options && options.url.indexOf('source=duolingo-stats') !== -1) { return; }
         
         // Check if progress has already been shown on the page.
         if ($('.dwp-progress').length) { return; }
@@ -172,13 +175,13 @@ function f($) {
             if (username==lookupname) {
                 console.log('timesaver');
                 showProgress(duo.user.get('language_data'), duo.user.get('learning_language'));
-        		
-                $.getJSON('//www.duolingo.com/users/' + lookupname, function(data) {
+                
+                $.getJSON('//www.duolingo.com/users/' + lookupname + '?source=duolingo-stats', function(data) {
                     dsUser = data;
                     cachedTree = null;
                 });
             } else {
-                $.getJSON('//www.duolingo.com/users/' + lookupname, function(data) {
+                $.getJSON('//www.duolingo.com/users/' + lookupname + '?source=duolingo-stats', function(data) {
                     dsUser = data;
                     cachedTree = null;
                     data && data.language_data && showProgress(data.language_data);
