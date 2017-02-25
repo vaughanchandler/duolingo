@@ -127,7 +127,7 @@ function f($) {
     // Analyze the page and initialize the AJAX request if it makes sense.
     function process(e, xhr, options) {
         
-        console.log('process()');
+        //console.log('process()');
 
         // Ignore AJAX requests initiated by this method to prevent infinite loops.
         if (options && options.url.indexOf('source=duolingo-stats') !== -1) { return; }
@@ -142,8 +142,6 @@ function f($) {
         username = duo.user.get('username');
         if (!username) { return; }
         
-        console.log('view = ' + duo.view);
-        
         // Make sure the tree isn't being shown.
         hideTree();
         
@@ -151,7 +149,7 @@ function f($) {
             
             // Set lookupname.
             lookupname = username;
-            console.log('lookupname = ' + lookupname);
+            //console.log('view=' + duo.view + '; lookupname=' + lookupname);
             
             // Add progress element to page.
             createDWP('#app .sidebar-progress');
@@ -165,7 +163,7 @@ function f($) {
             var lookupnameElm = document.querySelector('#app .profile-header-username');
             if (!lookupnameElm) { return; }
             lookupname = lookupnameElm.innerHTML;
-            console.log('lookupname = ' + lookupname);
+            //console.log('view=' + duo.view + '; lookupname=' + lookupname);
             
             // Add progress element to page.
             // Use the tier (translation), level "badge grids" and language list grids since not every profile has the tier or level grids.
@@ -173,7 +171,6 @@ function f($) {
             
             // Show the chart. Use the duo.user object if we're looking at our own profile, AJAX otherwise.
             if (username==lookupname) {
-                console.log('timesaver');
                 showProgress(duo.user.get('language_data'), duo.user.get('learning_language'));
                 
                 $.getJSON('//www.duolingo.com/users/' + lookupname + '?source=duolingo-stats', function(data) {
@@ -223,6 +220,8 @@ function f($) {
     // Shows the tree.
     function showTree(e) {
         
+        //console.log('showTree()');
+
         if ($('body.dstree').length) {
             
             // Tree is already being shown.
@@ -332,7 +331,7 @@ function f($) {
                 }
                 
                 cachedTree = tree;
-                console.log(tree);
+                //console.log(tree);
                 
             }
             
@@ -347,7 +346,7 @@ function f($) {
     // lang is the 2-character language code or null if looking at somebody else's profile since in that case language_data only has one key.
     function showProgress(ld, lang) {
         
-        console.log('showProgress()');
+        //console.log('showProgress()');
         
         try {
             
@@ -402,7 +401,7 @@ function f($) {
             }
             
         } catch(x) {
-            console.log('DWP: An error occured');
+            console.log('Duolingo Stats: Show Progress: An error occured');
             console.log(x.message);
             if (x.stack) { console.log(x.stack); }
         }
