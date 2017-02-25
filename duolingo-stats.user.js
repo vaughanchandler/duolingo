@@ -206,8 +206,7 @@ function f($) {
     
     // Creates HTML for showing the flag and level for the user's language.
     function getFlagLevel(l) {
-		return '<span title="' + l.language_string + '" class="flag flag-' + l.language + '-micro"></span> ' + l.level;
-		//return '<span title="' + data.language_data[lang].language_string + '" class="flag flag-' + lang + '-micro"></span> ' + data.language_data[lang].level;
+		return '<span title="' + l.language_string + '" class="flag flag-svg-micro flag-' + l.language + '"></span> ' + l.level;
 	}
     
     // Hides the tree.
