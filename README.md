@@ -1,21 +1,26 @@
 # Duolingo user scripts and bookmarklets
 
-**Duolingo Weekly Progress**
+**Duolingo Stats**
 
-* Shows you a progress chart for the last 7 days.
-* Works on your home page.
+* Shows you a progress chart for the last 7 days anyone's profile.
+* Shows you other people's trees on their profile (after you click on "Show the tree").
 * Works on all profiles (but only shows the language the person is currently learning).
-* [See details/screenshots](http://www.code-poet.net/duolingo/weekly-progress.html) or [install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-weekly-progress.user.js).
+* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-stats.user.js).
 
 **Duolingo Review**
 
 * Shows you all the questions and answers from a lesson or practice after you finish it.
-* [See details/screenshots](http://www.code-poet.net/duolingo/review.html) or [install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-review.user.js)
+* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-review.user.js)
 
 **Duolingo Incubator Stats**
 
 * Shows you the completion for phase 1 languages as percentages, rounded to 1 decimal place.
-* [See details/screenshots](http://www.code-poet.net/duolingo/incubator-stats.html), [install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-incubator-stats.user.js) or [install bookmarklet](http://www.code-poet.net/duolingo/incubator-stats.html)
+* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-incubator-stats.user.js)
+
+**Duolingo Weekly Progress**
+
+* Deprecated - use Duolingo Stats instead.
+* Don't use both at the same time - uninstall Duolingo Weekly Progress first.
 
 ## User scripts
 
@@ -48,29 +53,27 @@
 
 1. Delete the bookmarklet as you would delete any other bookmark.
 
-## Beta versions
+## Duolingo Stats
 
-### Duolingo Stats
-
-Duolingo Stats is intended to be a replacement for Duolingo Weekly Progress. You should uninstall or disable Duolingo Weekly Progress if you install this.
-
-Current features:
-
-* Shows you a progress chart for the last 7 days, on your home page and on other people's profiles.
-* Shows you other people's trees on their profile (after you click on "Show the tree").
-
-Planned features:
+### Planned features:
 
 * Show all certificates a person has earned, including the score for each certificate and the date/time test was taken.
 * Show the amount of points a person has in each language.
 * Show a person's all-time ranking among their followers.
 
-Known bugs / limitations:
+### Known bugs / limitations:
 
 * Progress charts and trees are only shown for the language the person is currently learning.
 * Trees don't show divisions between sections or bonus skills.
-* The text for showing/hiding the tree is still only in English.
-* The progress chart on your home page won't update after using immersion until you refresh the page or do a lesson/practice.
-* Still being tested.
+* The text for showing/hiding the tree is still only in English (translations welcome - see below).
 
-[Install Duolingo Stats](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-stats.user.js) (instructions above)
+### Localisation
+
+Feel free to submit a pull request or issue to add/update translated text in your language for the following strings:
+
+* **Days of the week**: A 1 or 2 letter abbreviation for each day of the week, eg *Mo, Tu, We, Th, Fr, Sa, Su*.
+* **Loading message**: "*Loading progress for %lookupname%...*"
+* **No progess message**: "*No progress for this week.*"
+* **Progress heading**: "*Progess*"
+* **Link text for showing the tree**: "*Show The Tree*"
+* **Link text for showing the tree**: "*Hide The Tree*"
