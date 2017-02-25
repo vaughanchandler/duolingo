@@ -2,20 +2,19 @@
 
 **Duolingo Stats**
 
-* Shows you a progress chart for the last 7 days anyone's profile.
+* Shows you a progress chart for the last 7 days on all profiles.
 * Shows you other people's trees on their profile (after you click on "Show the tree").
-* Works on all profiles (but only shows the language the person is currently learning).
+* Only shows stats for the language the person is currently learning.
 * [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-stats.user.js).
-
-**Duolingo Review**
-
-* Shows you all the questions and answers from a lesson or practice after you finish it.
-* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-review.user.js)
 
 **Duolingo Incubator Stats**
 
 * Shows you the completion for phase 1 languages as percentages, rounded to 1 decimal place.
 * [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-incubator-stats.user.js)
+
+**Duolingo Review**
+
+* Deprecated - Duolingo provides this functionality now.
 
 **Duolingo Weekly Progress**
 
