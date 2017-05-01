@@ -10,7 +10,12 @@
 **Duolingo Incubator Stats**
 
 * Shows you the completion for phase 1 languages as percentages, rounded to 1 decimal place.
-* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-incubator-stats.user.js)
+* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-incubator-stats.user.js).
+
+**Duolingo Flag Language**
+
+* Shows you the language name when you hover your mouse over a flag.
+* [Install userscript](https://github.com/vaughanchandler/duolingo/raw/master/duolingo-flag-language.user.js).
 
 **Duolingo Review**
 
